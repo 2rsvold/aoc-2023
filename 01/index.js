@@ -1,6 +1,5 @@
 const createLineReader = require('../lib/reader.js');
-const args = process.argv.slice(2);
-const lineReader = createLineReader(args[0]);
+const lineReader = createLineReader('input.txt');
 
 // Variables
 let digits = [];
