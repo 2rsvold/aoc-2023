@@ -70,9 +70,10 @@ function simultaneousNavigation(starts) {
 
 		iterations++;
 
-		// console.log(current);
-
-		if (current.filter(e => e.split('')[2] != 'Z').length == 0) out = true;
+		
+		let notZ = current.filter(e => e.split('')[2] != 'Z').length;
+		if (notZ == 0) out = true;
+		console.log(notZ, current, iterations);
 	}
 
 	return iterations;
@@ -84,5 +85,8 @@ lineReader.onLine((l) => {
 });
 
 lineReader.onClose(() => {
-	console.log(simultaneousNavigation(getAllStartPositions(map)));
+	let starts = getAllStartPositions(map);
+	console.log(starts);
+
+	console.log(simultaneousNavigation(starts));
 });
