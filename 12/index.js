@@ -1,4 +1,3 @@
-const { rename } = require('fs');
 const createLineReader = require('../lib/reader.js');
 const lineReader = createLineReader('input.txt');
 
